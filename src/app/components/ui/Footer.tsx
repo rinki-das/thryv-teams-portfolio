@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Mail, Facebook, Twitter, Linkedin, Github } from "lucide-react";
+import { Mail, Facebook as FacebookIcon, Twitter as TwitterIcon, Linkedin as LinkedinIcon, Github as GithubIcon } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -24,25 +24,25 @@ export default function Footer() {
                 href="#"
                 className="p-2 rounded-full bg-white shadow hover:bg-purple-50 hover:text-purple-600 transition"
               >
-                <Facebook className="w-5 h-5" />
+                <FacebookIcon className="w-5 h-5" />
               </a>
               <a
                 href="#"
                 className="p-2 rounded-full bg-white shadow hover:bg-purple-50 hover:text-purple-600 transition"
               >
-                <Twitter className="w-5 h-5" />
+                <TwitterIcon className="w-5 h-5" />
               </a>
               <a
                 href="#"
                 className="p-2 rounded-full bg-white shadow hover:bg-purple-50 hover:text-purple-600 transition"
               >
-                <Linkedin className="w-5 h-5" />
+                <LinkedinIcon className="w-5 h-5" />
               </a>
               <a
                 href="#"
                 className="p-2 rounded-full bg-white shadow hover:bg-purple-50 hover:text-purple-600 transition"
               >
-                <Github className="w-5 h-5" />
+                <GithubIcon className="w-5 h-5" />
               </a>
             </div>
           </div>

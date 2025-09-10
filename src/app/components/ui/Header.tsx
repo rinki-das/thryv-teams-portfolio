@@ -6,6 +6,7 @@ import { motion, AnimatePresence, animate } from "framer-motion";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const MotionButton = motion.button;
 
   const navLinks = [
     { href: "home", label: "Home" },
@@ -13,7 +14,6 @@ export default function Header() {
     { href: "why-us", label: "Why us" },
     { href: "contact", label: "Contact" },
     { href: "faq", label: "faq" },
-
   ];
 
   const handleScroll = (id: string) => {
@@ -37,8 +37,14 @@ export default function Header() {
 
   const drawerVariants = {
     initial: { x: "100%" },
-    animate: { x: 0, transition: { type: "spring", stiffness: 260, damping: 30 } },
-    exit: { x: "100%", transition: { type: "spring", stiffness: 260, damping: 30 } },
+    animate: {
+      x: 0,
+      transition: { type: "spring", stiffness: 260, damping: 30 },
+    },
+    exit: {
+      x: "100%",
+      transition: { type: "spring", stiffness: 260, damping: 30 },
+    },
   };
 
   return (
@@ -55,14 +61,14 @@ export default function Header() {
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
-              <motion.button
+              <MotionButton
                 key={link.href}
                 whileHover={{ y: -2 }}
                 onClick={() => handleScroll(link.href)}
                 className="relative text-gray-700 font-medium transition-colors hover:text-amber-400"
               >
                 {link.label}
-              </motion.button>
+              </MotionButton>
             ))}
           </nav>
 
