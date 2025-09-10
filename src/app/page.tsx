@@ -279,7 +279,7 @@ export default function Home() {
               <Mail /> Contact Us
             </h3>
             <p className="text-gray-700 mb-10 text-xl md:text-2xl leading-relaxed">
-              Have a project in mind or just want to say hello? We'd love to
+              Have a project in mind or just want to say hello? We would love to
               hear from you. Our dedicated team is ready to collaborate,
               innovate, and bring your ideas to life.
             </p>
