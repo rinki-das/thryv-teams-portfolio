@@ -11,42 +11,42 @@ const faqData: FAQItem[] = [
   {
     question: "What technologies do you use for development?",
     answer:
-      "We mainly use Next.js, React, React Native, Tailwind CSS, and TypeScript. Backend includes Node.js, Firebase, or Express.",
+      "We mainly use Next.js, React, React Native, Tailwind CSS, and TypeScript for frontend and mobile apps. Our backend stack includes Node.js, Express.js, Firebase, and MySQL. We also work with Sanity CMS, Flask, REST APIs, and third-party integrations like Razorpay, Cashfree, and Exotel for payments and real-time communication. This allows us to build scalable, secure, and high-performance applications.",
   },
   {
     question: "Do you provide responsive design?",
     answer:
-      "Yes! All our projects are fully responsive and optimized for mobile, tablet, and desktop.",
+      "Yes! Every project we deliver is fully responsive and optimized for mobile, tablet, and desktop devices. We follow modern UI/UX principles, ensuring pixel-perfect layouts, smooth animations, and fast-loading experiences across all screen sizes.",
   },
   {
     question: "How can I contact you for a project?",
     answer:
-      "You can reach out via the contact form in this portfolio or by email at your@email.com.",
+      "You can reach out through the contact form on this portfolio website or directly via email at rinroy351@gmail.com. You can also check our freelancing profile on Freelancer (https://www.freelancer.in/u/rinkid51) and connect with us there.",
   },
   {
     question: "Do you work on freelance projects?",
     answer:
-      "Absolutely! We take freelance projects of all sizes, from startups to established businesses, delivering high-quality solutions.",
+      "Absolutely! We take on freelance projects of all sizes—from MVPs for startups to enterprise-grade applications. Our team ensures clear communication, on-time delivery, and high-quality work tailored to your business needs.",
   },
   {
     question: "What is your typical process for freelance projects?",
     answer:
-      "We start with understanding your requirements, create a roadmap, share wireframes or prototypes, implement the solution, and ensure thorough testing before launch.",
+      "We start by discussing your requirements and goals in detail. Then, we create a roadmap and share wireframes or prototypes for feedback. After approval, we move into development, testing, and deployment. Throughout the process, we provide regular updates and ensure transparency at every stage.",
   },
   {
     question: "How do you charge for freelance projects?",
     answer:
-      "We usually charge based on project scope. Small projects can have fixed pricing, while larger or ongoing work may use hourly rates. We always provide a clear estimate upfront.",
+      "We usually charge based on the scope and complexity of the project. For small projects, we offer fixed pricing, while larger or long-term projects may be billed hourly or milestone-based. Before starting, we always share a detailed proposal and cost breakdown so everything is clear upfront.",
   },
   {
     question: "Can you work with clients remotely?",
     answer:
-      "Yes! We collaborate seamlessly with clients worldwide using video calls, project management tools, and real-time communication to ensure smooth workflow.",
+      "Yes! We have successfully worked with clients across India, the US, and other countries. We collaborate using video calls, Slack, Trello, GitHub, and other project management tools, ensuring smooth communication and efficient delivery.",
   },
   {
     question: "How do you handle project revisions?",
     answer:
-      "We include a reasonable number of revisions in the project scope. Additional revisions can be discussed and agreed upon if needed.",
+      "We include a reasonable number of revisions in the project scope. Our goal is to make sure you're completely satisfied. If additional revisions are needed beyond the agreed scope, we discuss them openly and adjust timelines and pricing if required.",
   },
 ];
 

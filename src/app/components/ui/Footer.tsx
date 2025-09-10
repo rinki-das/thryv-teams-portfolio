@@ -1,7 +1,14 @@
 "use client";
 
 import React from "react";
-import { Mail, Facebook as FacebookIcon, Twitter as TwitterIcon, Linkedin as LinkedinIcon, Github as GithubIcon } from "lucide-react";
+import Image from "next/image"; // ✅ import Image
+import {
+  Mail,
+  Facebook as FacebookIcon,
+  Twitter as TwitterIcon,
+  Linkedin as LinkedinIcon,
+  Github as GithubIcon,
+} from "lucide-react";
 
 export default function Footer() {
   return (
@@ -10,9 +17,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-5">
-            <h2 className="text-3xl font-extrabold text-black tracking-tight">
-              thryv
-            </h2>
+            {/* ✅ Replaced text with logo */}
+            <Image
+              src="/thryv_logo.png" // place your logo in /public/thryv_logo.png
+              alt="Thryv Logo"
+              width={120}
+              height={40}
+              className="object-contain"
+              priority
+            />
             <p className="text-gray-600 text-base leading-relaxed">
               Fueling growth with passion and innovation. We craft digital
               experiences that empower talent and drive success.
@@ -103,7 +116,8 @@ export default function Footer() {
         {/* Bottom Bar */}
         <hr className="mt-16 border-gray-300" />
         <p className="mt-6 text-center text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} <span className="font-semibold">thryv</span>. All rights reserved.
+          &copy; {new Date().getFullYear()}{" "}
+          <span className="font-semibold">thryv</span>. All rights reserved.
         </p>
       </div>
     </footer>

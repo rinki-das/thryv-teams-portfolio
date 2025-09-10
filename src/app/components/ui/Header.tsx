@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { X, Menu } from "lucide-react";
 import { motion, AnimatePresence, animate } from "framer-motion";
+import Image from "next/image"; // ✅ import Image
 
 // Correctly typed motion components
 const MotionDiv = motion.div as unknown as React.FC<
@@ -52,10 +53,19 @@ export default function Header() {
     <header className="w-full sticky top-0 z-50">
       <div className="mx-6 md:mx-20 my-3">
         <div className="flex justify-between items-center px-6 py-4 rounded-xl shadow-md bg-white">
+          {/* ✅ Logo Section */}
           <div className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-gray-900 tracking-wide">thryv</span>
+            <Image
+              src="/thryv_logo.png" // place logo in public/thryv_logo.png
+              alt="Thryv Logo"
+              width={80}
+              height={100}
+              className="object-contain"
+              priority
+            />
           </div>
 
+          {/* ✅ Desktop Nav */}
           <nav className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
               <MotionButton
@@ -69,6 +79,7 @@ export default function Header() {
             ))}
           </nav>
 
+          {/* ✅ Mobile Menu Button */}
           <button
             className="md:hidden"
             onClick={() => setIsOpen(true)}
@@ -79,6 +90,7 @@ export default function Header() {
         </div>
       </div>
 
+      {/* ✅ Drawer + Overlay */}
       <AnimatePresence>
         {isOpen && (
           <>
