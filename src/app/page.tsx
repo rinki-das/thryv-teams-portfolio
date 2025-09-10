@@ -139,7 +139,7 @@ export default function Home() {
               transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
             />
             {/* Foreground Image */}
-           <motion.img
+            <motion.img
               src="/homeImage.gif"
               alt="Main Animation"
               className="relative z-10 w-[350px] md:w-[450px]"
@@ -272,7 +272,7 @@ export default function Home() {
             <h3 className="text-3xl font-bold mb-6 flex items-center justify-center md:justify-start gap-2 text-purple-800">
               <Mail /> Contact Us
             </h3>
-            <p className="text-gray-700 mb-10 text-xl md:text-2xl leading-relaxed">
+            <p>
               Have a project in mind or just want to say hello? We would love to
               hear from you. Our dedicated team is ready to collaborate,
               innovate, and bring your ideas to life.
