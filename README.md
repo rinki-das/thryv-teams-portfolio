@@ -1,10 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Thryv Teams Portfolio 🚀
 
-## Getting Started
+A modern portfolio website showcasing the Thryv team’s projects, skills, and expertise in web and app development.
+Built with Next.js, React, Tailwind CSS, TypeScript, and deployed on Vercel.
 
-First, run the development server:
+🔗 Live Demo: https://thryv-teams-portfolio.vercel.app/
 
-```bash
+✨ Features
+
+Modern and responsive UI/UX
+
+Smooth animations with Framer Motion
+
+Contact form powered by EmailJS
+
+FAQ section with interactive accordions
+
+Team branding and project showcases
+
+SEO optimized with Next.js Metadata & OpenGraph
+
+🛠 Tech Stack
+
+Frontend: Next.js, React, TypeScript, Tailwind CSS, Framer Motion
+Backend/Services: Node.js, Express.js, Firebase (Auth, Firestore), EmailJS
+Other Tools: Redux, Sanity CMS, Sonner (toast notifications)
+
+🚀 Getting Started
+
+First, clone the repo and install dependencies:
+
+git clone https://github.com/rinki-das/thryv-teams-portfolio.git
+cd thryv-teams-portfolio
+npm install
+
+
+Run the development server:
+
 npm run dev
 # or
 yarn dev
@@ -12,23 +43,35 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open http://localhost:3000
+ with your browser to view the result.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📂 Project Structure
+/app
+  /components
+    /ui
+      Header.tsx
+      Footer.tsx
+      FAQSection.tsx
+      Loader.tsx
+  page.tsx
+  globals.css
 
-## Learn More
+📬 Contact
 
-To learn more about Next.js, take a look at the following resources:
+👩‍💻 Rinki Das
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+📧 Email: rinroy351@gmail.com
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🌐 Freelancer: https://www.freelancer.in/u/rinkid51
 
-## Deploy on Vercel
+🔗 LinkedIn: https://www.linkedin.com/in/rinki-das/
 
-link- https://thryv-teams-portfolio.vercel.app/
+💻 GitHub: https://github.com/rinki-das
+
+📄 License
+
+This project is licensed under the MIT License.
+Feel free to use and customize it for your own portfolio!
