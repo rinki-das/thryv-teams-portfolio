@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, MotionProps } from "framer-motion";
 import {
   Code,
   Smartphone,
@@ -22,6 +22,10 @@ import { toast } from "sonner";
 import Footer from "./components/ui/Footer";
 
 // Animated Term Component
+const MotionSpan = motion.span as React.FC<
+  React.HTMLAttributes<HTMLSpanElement> & MotionProps
+>;
+
 const AnimatedTerm = ({ terms }: { terms: string[] }) => {
   const [currentTermIndex, setCurrentTermIndex] = useState(0);
 
@@ -34,7 +38,7 @@ const AnimatedTerm = ({ terms }: { terms: string[] }) => {
 
   return (
     <AnimatePresence mode="wait">
-      <motion.span
+      <MotionSpan
         key={terms[currentTermIndex]}
         initial={{ y: -30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -43,7 +47,7 @@ const AnimatedTerm = ({ terms }: { terms: string[] }) => {
         className="inline-block text-purple-800 font-bold"
       >
         {terms[currentTermIndex]}
-      </motion.span>
+      </MotionSpan>
     </AnimatePresence>
   );
 };
@@ -57,7 +61,12 @@ export default function Home() {
     message: "",
   });
   const [loadingContact, setLoadingContact] = useState(false);
-
+  const MotionH2 = motion.h2 as React.FC<
+    React.HTMLAttributes<HTMLHeadingElement> & MotionProps
+  >;
+  const MotionImg = motion.img as React.FC<
+    React.ImgHTMLAttributes<HTMLImageElement> & MotionProps
+  >;
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 3000);
     return () => clearTimeout(timer);
@@ -112,14 +121,14 @@ export default function Home() {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <motion.h2
+            <MotionH2
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="text-4xl md:text-6xl font-extrabold text-black leading-tight"
             >
               Building digital products, brands <AnimatedTerm terms={terms} />
-            </motion.h2>
+            </MotionH2>
             <p className="text-lg md:text-xl text-gray-600 max-w-lg">
               We are a passionate team of designers, developers, and innovators
               focused on crafting exceptional digital experiences. From UI/UX
@@ -131,15 +140,15 @@ export default function Home() {
 
           <div className="relative flex justify-center md:justify-end">
             {/* Background Animated */}
-            <motion.img
+            <MotionImg
               src="/bggg.png"
               alt="Background Decoration"
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] md:w-[550px] opacity-50"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] md:w-[550px]"
               animate={{ rotate: [0, 15, -15, 0], scale: [1, 1.1, 1] }}
               transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
             />
             {/* Foreground Image */}
-            <motion.img
+            <MotionImg
               src="/homeImage.gif"
               alt="Main Animation"
               className="relative z-10 w-[350px] md:w-[450px]"
@@ -226,14 +235,14 @@ export default function Home() {
             </p>
           </div>
           <div className="md:w-1/2 relative flex justify-center">
-            <motion.img
+            <MotionImg
               src="/orange.png"
               alt="Background Animation"
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] md:w-[650px] opacity-50"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] md:w-[650px]"
               animate={{ rotate: [0, 15, -15, 0], scale: [1, 1.1, 1] }}
               transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
             />
-            <motion.img
+            <MotionImg
               src="/whyUs.gif"
               alt="Team working illustration"
               className="relative z-10 w-80 md:w-[550px]"
@@ -252,14 +261,14 @@ export default function Home() {
       >
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="md:w-1/2 relative flex justify-center">
-            <motion.img
+            <MotionImg
               src="/bggg.png"
               alt="Background Animation"
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 md:w-[600px] opacity-50"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 md:w-[600px] "
               animate={{ rotate: [0, 10, -10, 0], scale: [1, 1.05, 1] }}
               transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
             />
-            <motion.img
+            <MotionImg
               src="/contactUs.gif"
               alt="Contact Illustration"
               className="relative z-10 w-80 md:w-96 lg:w-[450px] rounded-xl"
